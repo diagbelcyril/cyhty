@@ -1,0 +1,166 @@
+.hero-container {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+              url('../../assets/images/codm.jpg') no-repeat center center/cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.logo { font-weight: 800; font-size: 1.5rem; letter-spacing: 2px; }
+nav a { text-decoration: none; color: #ccc; margin-left: 30px; font-size: 0.8rem; font-weight: 600; }
+nav a.active { color: white; border-bottom: 2px solid white; padding-bottom: 5px; }
+
+/* Hero Text */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 0.9;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h3 { letter-spacing: 4px; color: #eee; margin-top: 10px; }
+
+p { max-width: 450px; color: #bbb; line-height: 1.6; font-size: 0.9rem; }
+
+/* The Angled Button */
+.cta-button {
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: white;
+  color: black;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #ff4757; /* Highlight color */
+  color: white;
+}
+
+/* Trailer Section */
+.video-thumbnail {
+  width: 400px;
+  height: 220px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.play-button {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  padding: 20px 0;
+  color: #666;
+  border-top: 1px solid #222;
+}
+/* --- RESPONSIVENESS --- */
+
+/* 1. Tablet & Large Phones (1024px and down) */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 0 5%;
+    height: auto; /* Allow content to push the height */
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    flex-direction: column; /* Stack text and trailer vertically */
+    text-align: center;
+    padding-top: 50px;
+    gap: 40px;
+  }
+
+  h1 {
+    font-size: 4rem; /* Smaller heading for tablets */
+  }
+
+  .side-socials {
+    position: static; /* Move socials from side to a row below the text */
+    flex-direction: row;
+    justify-content: center;
+    transform: none;
+    margin-top: 30px;
+  }
+
+  .trailer-box {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* 2. Mobile Phones (768px and down) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar nav {
+    gap: 15px;
+    flex-wrap: wrap; /* Wraps links if they are too wide */
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 3rem; /* Even smaller for phones */
+  }
+
+  .angled-btn {
+    width: 100%; /* Full width button for easier tapping */
+    clip-path: none; /* Removing the angle on mobile often looks cleaner */ 
+  }
+
+  .features-section {
+    padding: 60px 5%;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    width: 100%;
+  }
+}

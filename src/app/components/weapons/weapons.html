@@ -1,0 +1,29 @@
+<div class="weapons-page">
+  <div class="bg"></div>
+
+  <nav class="navbar">
+  <div class="logo">CYHT LOADOUTS</div>
+
+  <button class="menu-btn" (click)="menuOpen = !menuOpen">
+    ☰
+  </button>
+
+  <ul class="nav-links" [class.open]="menuOpen">
+    <li><a routerLink="/home">HOME</a></li>
+    <li><a routerLink="/weapons">WEAPONS</a></li>
+    <li><a routerLink="/about">ABOUT</a></li>
+    <li><a routerLink="/contacts">CONTACT US</a></li>
+  </ul>
+</nav>
+
+  <section class="weapon-sections">
+    <div class="weapon-column" *ngFor="let category of categories">
+      <h2>{{ category.title }}</h2>
+
+      <div class="weapon-box" *ngFor="let gun of category.items">
+        <img [src]="gun.image" [alt]="gun.name">
+        <span>{{ gun.name }}</span>
+      </div>
+    </div>
+  </section>
+</div>

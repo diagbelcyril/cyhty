@@ -1,0 +1,44 @@
+<div class="about-page">
+  <div class="bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+  <div class="logo">CYHT LOADOUTS</div>
+
+  <button class="menu-btn" (click)="menuOpen = !menuOpen">
+    ☰
+  </button>
+
+  <ul class="nav-links" [class.open]="menuOpen">
+    <li><a routerLink="/home">HOME</a></li>
+    <li><a routerLink="/weapons">WEAPONS</a></li>
+    <li><a routerLink="/about">ABOUT</a></li>
+    <li><a routerLink="/contacts">CONTACT US</a></li>
+  </ul>
+</nav>
+
+  <!-- CONTENT -->
+  <section class="about-content">
+    <div class="about-card">
+      <h1>ABOUT CYHT LOADOUTS</h1>
+      <p>
+        CYHT Loadouts is a Battle Royale weapon recommendation website for
+        Call of Duty: Mobile players. It helps new and experienced players
+        discover optimized attachments, compare Mythic and Non-Mythic builds,
+        and learn the current weapon meta.
+      </p>
+
+      <p>
+        Our goal is to provide accurate, beginner-friendly, and competitive
+        loadouts that improve gameplay performance in every match.
+      </p>
+
+      <div class="features">
+        <div class="feature-box">🎯 Meta Weapon Builds</div>
+        <div class="feature-box">⚡ Copy Loadout Codes</div>
+        <div class="feature-box">🔍 Weapon Comparisons</div>
+        <div class="feature-box">📘 Beginner Guides</div>
+      </div>
+    </div>
+  </section>
+</div>

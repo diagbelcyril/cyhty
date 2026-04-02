@@ -1,0 +1,35 @@
+<div class="contact-page">
+  <div class="bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+  <div class="logo">CYHT LOADOUTS</div>
+
+  <button class="menu-btn" (click)="menuOpen = !menuOpen">
+    ☰
+  </button>
+
+  <ul class="nav-links" [class.open]="menuOpen">
+    <li><a routerLink="/home">HOME</a></li>
+    <li><a routerLink="/weapons">WEAPONS</a></li>
+    <li><a routerLink="/about">ABOUT</a></li>
+    <li><a routerLink="/contacts">CONTACT US</a></li>
+  </ul>
+</nav>
+
+
+  <!-- CONTACT CARD -->
+  <section class="contact-content">
+    <div class="contact-card">
+      <h1>CONTACT US</h1>
+      <p>Have questions, suggestions, or weapon builds to share? Send us a message.</p>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </section>
+</div>
