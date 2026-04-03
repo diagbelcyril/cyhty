@@ -20,7 +20,7 @@
     <div class="weapon-column" *ngFor="let category of categories">
       <h2>{{ category.title }}</h2>
 
-      <div class="weapon-box" *ngFor="let gun of category.items">
+      <div class="weapon-box" *ngFor="let gun of category.items" routerLink="/{{ gun.name | lowercase }}">
         <img [src]="gun.image" [alt]="gun.name">
         <span>{{ gun.name }}</span>
       </div>

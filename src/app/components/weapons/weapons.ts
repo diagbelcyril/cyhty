@@ -15,7 +15,7 @@ export class WeaponsComponent {
     {
       title: 'ASSAULT',
       items: [
-        { name: 'AK-117', image: 'ak117.webp' },
+        { name: 'AK117', image: 'ak117.webp' },
         { name: 'Grau', image: 'images/gun2.jpg' }
       ]
     },

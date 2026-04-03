@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.detail-page {
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('../../../assets/images/codm.jpg') no-repeat center center/cover;
+  z-index: -1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(10, 20, 35, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px;
+  align-items: center;
+}
+
+.weapon-preview img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+}
+
+.weapon-info {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.weapon-info h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.role {
+  color: #00ffcc;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-box {
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+}
+
+.attachments {
+  margin: 15px 0 25px;
+  padding-left: 18px;
+  line-height: 1.8;
+}
+
+.copy-btn {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #80d8a6, #00ffcc);
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.copy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(0,255,170,.45);
+}
+
+@media (max-width: 768px) {
+  .detail-content {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .weapon-info h1 {
+    font-size: 32px;
+  }
+}
