@@ -1,0 +1,48 @@
+<div class="detail-page">
+  <div class="bg"></div>
+
+  <nav class="navbar">
+    <div class="logo">CYHT LOADOUTS</div>
+
+    <button class="menu-btn" (click)="menuOpen = !menuOpen">
+      ☰
+    </button>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li><a routerLink="/home" (click)="menuOpen=false">HOME</a></li>
+      <li><a routerLink="/weapons" (click)="menuOpen=false">WEAPONS</a></li>
+      <li><a routerLink="/about" (click)="menuOpen=false">ABOUT</a></li>
+      <li><a routerLink="/contacts" (click)="menuOpen=false">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <section class="detail-content" *ngIf="currentWeapon">
+    <div class="weapon-preview">
+      <img [src]="currentWeapon.image" [alt]="currentWeapon.name">
+    </div>
+
+    <div class="weapon-info">
+      <h1>{{ currentWeapon.name }}</h1>
+      <p class="role">{{ currentWeapon.role }}</p>
+
+      <div class="stats-grid">
+        <div class="stat-box">Damage: {{ currentWeapon.stats.damage }}</div>
+        <div class="stat-box">Accuracy: {{ currentWeapon.stats.accuracy }}</div>
+        <div class="stat-box">Range: {{ currentWeapon.stats.range }}</div>
+        <div class="stat-box">Mobility: {{ currentWeapon.stats.mobility }}</div>
+      </div>
+
+      <h2>Recommended Attachments</h2>
+      <ul class="attachments">
+        <li *ngFor="let item of currentWeapon.attachments">
+          {{ item }}
+        </li>
+      </ul>
+
+      <button class="copy-btn">COPY LOADOUT CODE</button>
+      <button class="copy-btn" [routerLink]="['/tutorial', weaponId]">
+        WATCH TUTORIAL
+      </button>
+    </div>
+  </section>
+</div>

@@ -16,28 +16,28 @@ export class WeaponsComponent {
       title: 'ASSAULT',
       items: [
         { name: 'AK117', image: 'ak117.webp' },
-        { name: 'Grau', image: 'images/gun2.jpg' }
+        { name: 'Grau', image: 'grau.jpg' }
       ]
     },
     {
       title: 'SMGS',
       items: [
-        { name: 'Fennec', image: 'images/gun3.jpg' },
-        { name: 'QQ9', image: 'images/gun4.jpg' }
+        { name: 'Fennec', image: 'fennec.jpg' },
+        { name: 'QQ9', image: 'qq9.jpg' }
       ]
     },
     {
       title: 'SNIPERS',
       items: [
-        { name: 'DL Q33', image: 'images/gun5.jpg' },
-        { name: 'HDR', image: 'images/gun6.jpg' }
+        { name: 'DL Q33', image: 'dlq.jpg' },
+        { name: 'HDR', image: 'hdr.jpg' }
       ]
     },
     {
       title: 'SHOTGUNS',
       items: [
-        { name: 'KRM-262', image: 'images/gun7.jpg' },
-        { name: 'BY15', image: 'images/gun8.jpg' }
+        { name: 'KRM-262', image: 'krm.jpg' },
+        { name: 'BY15', image: 'by15.jpg' }
       ]
     }
   ];

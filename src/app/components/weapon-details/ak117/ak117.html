@@ -3,20 +3,24 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="logo">CYHT LOADOUTS</div>
+  <div class="logo">CYHT LOADOUTS</div>
 
-    <ul class="nav-links">
-      <li><a routerLink="/home">HOME</a></li>
-      <li><a routerLink="/weapons">WEAPONS</a></li>
-      <li><a routerLink="/about">ABOUT</a></li>
-      <li><a routerLink="/contacts">CONTACTS</a></li>
-    </ul>
-  </nav>
+  <button class="menu-btn" (click)="menuOpen = !menuOpen">
+    ☰
+  </button>
+
+  <ul class="nav-links" [class.open]="menuOpen">
+  <li><a routerLink="/home" (click)="menuOpen=false">HOME</a></li>
+  <li><a routerLink="/weapons" (click)="menuOpen=false">WEAPONS</a></li>
+  <li><a routerLink="/about" (click)="menuOpen=false">ABOUT</a></li>
+  <li><a routerLink="/contacts" (click)="menuOpen=false">CONTACT US</a></li>
+</ul>
+</nav>
 
   <section class="detail-content">
     <!-- LEFT IMAGE -->
     <div class="weapon-preview">
-      <img src="images/gun1.jpg" alt="AK-117">
+      <img src="ak117.webp" alt="AK-117">
     </div>
 
     <!-- RIGHT DETAILS -->

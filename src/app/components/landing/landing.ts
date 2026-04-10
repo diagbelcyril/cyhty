@@ -3,14 +3,11 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
+  standalone: true,
   imports: [RouterModule],
   templateUrl: './landing.html',
   styleUrl: './landing.css',
 })
 export class LandingComponent {
   menuOpen = false;
-
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
 }

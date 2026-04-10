@@ -236,3 +236,34 @@ h1 {
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+
+  .cta-button {
+    width: 100%;
+    clip-path: none;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

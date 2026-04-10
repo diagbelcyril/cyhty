@@ -164,3 +164,42 @@ p { max-width: 450px; color: #bbb; line-height: 1.6; font-size: 0.9rem; }
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    clip-path: none;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

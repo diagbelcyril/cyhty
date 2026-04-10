@@ -1,10 +1,40 @@
-<div class="container">
-  <h2>Login</h2>
+<div class="login-page">
+  <div class="bg"></div>
 
-  <form>
-    <input type="text" placeholder="Username" required>
-    <input type="password" placeholder="Password" required>
+  <div class="login-card">
+    <h1>CYHT LOADOUTS</h1>
+    <p>Login to access the weapon meta database</p>
 
-    <button type="submit">Login</button>
-  </form>
+    <form (ngSubmit)="login()">
+      <input
+        type="text"
+        placeholder="Username"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+
+      <button type="submit">LOGIN</button>
+    </form>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <p class="demo-cred">
+      Demo Account → <strong>admin / admin</strong>
+    </p>
+
+    <!-- ✅ NEW REGISTER LINK -->
+    <p class="register-link">
+      Don’t have an account?
+      <a routerLink="/register">Sign up here</a>
+    </p>
+  </div>
 </div>

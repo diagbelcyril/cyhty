@@ -1,1 +1,30 @@
-<p>tutorial works!</p>
+<div class="tutorial-page">
+  <div class="bg"></div>
+
+  <nav class="navbar">
+    <div class="logo">CYHT LOADOUTS</div>
+
+    <button class="menu-btn" (click)="menuOpen = !menuOpen">
+      ☰
+    </button>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li><a routerLink="/home" (click)="menuOpen=false">HOME</a></li>
+      <li><a routerLink="/weapons" (click)="menuOpen=false">WEAPONS</a></li>
+      <li><a routerLink="/about" (click)="menuOpen=false">ABOUT</a></li>
+      <li><a routerLink="/contacts" (click)="menuOpen=false">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <section class="tutorial-content">
+    <h1>{{ weaponId.toUpperCase() }} TUTORIAL</h1>
+
+    <div class="video-container">
+      <iframe
+        [src]="videoUrl"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+</div>
