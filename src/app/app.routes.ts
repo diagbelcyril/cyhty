@@ -8,7 +8,6 @@ import { AboutComponent } from './components/about/about';
 import { LoginComponent } from './components/login/login';
 import { RegisterComponent } from './components/register/register';
 import { Contact } from './components/contact/contact';
-import { ak117Component } from './components/weapon-details/ak117/ak117';
 import { WeaponDetailComponent } from './components/weapon-details/weapon-detail/weapon-detail';
 
 export const routes: Routes = [
@@ -24,7 +23,6 @@ export const routes: Routes = [
   path: 'tutorial/:id',
   component: TutorialComponent
 },
-  { path: 'ak117', component: ak117Component },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },

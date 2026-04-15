@@ -16,21 +16,26 @@ export class TutorialComponent {
   menuOpen = false;
 
   videos: any = {
-    ak117: 'https://www.youtube.com/embed/jNQXAC9IVRw',
-    grau: 'https://www.youtube.com/embed/M7lc1UVf-VE',
-    fennec: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    qq9: 'https://www.youtube.com/embed/oHg5SJYRHA0',
-    hdr: 'https://www.youtube.com/embed/ysz5S6PUM-U',
-    'dl q33': 'https://www.youtube.com/embed/tgbNymZ7vqY',
-    'krm-262': 'https://www.youtube.com/embed/aqz-KE-bpKQ',
-    by15: 'https://www.youtube.com/embed/ScMzIvxBSi4'
+    'ak117': 'https://www.youtube.com/embed/_ItlkX4IsVE',
+    'grau': 'https://www.youtube.com/embed/RG9FRBJfIQ8',
+    'fennec': 'https://www.youtube.com/embed/elxXd_BawMU',
+    'qq9': 'https://www.youtube.com/embed/q2XGcaK0M4Q',
+    'hdr': 'https://www.youtube.com/embed/dj4GueCpsZ8',
+    'dl-q33': 'https://www.youtube.com/embed/Kg9vm6pvu6Q',
+    'krm-262': 'https://www.youtube.com/embed/fZkiyyM2xng',
+    'by15': 'https://www.youtube.com/embed/2IVAAFSsK8k',
+
+    // MYTHIC
+    'ak117-mythic': 'https://www.youtube.com/embed/e2kK8nvV5kw',
+    'grau-mythic': 'https://www.youtube.com/embed/TEC8MEcJ3Z4',
+    'dlq-mythic': 'https://www.youtube.com/embed/hnDHMlBaf8Y'
   };
 
   constructor(
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer
   ) {
-    this.weaponId = this.route.snapshot.params['id'];
+    this.weaponId = this.route.snapshot.paramMap.get('id') || '';
 
     const url =
       this.videos[this.weaponId] ||

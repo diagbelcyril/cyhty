@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ak117Component } from './ak117';
+import { Mythic } from './mythic';
 
-describe('WeaponDetail', () => {
-  let component: ak117Component;
-  let fixture: ComponentFixture<ak117Component>;
+describe('Mythic', () => {
+  let component: Mythic;
+  let fixture: ComponentFixture<Mythic>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ak117Component],
+      imports: [Mythic],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ak117Component);
+    fixture = TestBed.createComponent(Mythic);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

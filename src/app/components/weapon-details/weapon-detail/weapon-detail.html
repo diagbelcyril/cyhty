@@ -39,10 +39,13 @@
         </li>
       </ul>
 
-      <button class="copy-btn">COPY LOADOUT CODE</button>
-      <button class="copy-btn" [routerLink]="['/tutorial', weaponId]">
-        WATCH TUTORIAL
-      </button>
+      <button class="copy-btn" (click)="copyLoadout()">
+  COPY LOADOUT CODE
+</button>
+
+<button class="copy-btn" [routerLink]="['/tutorial', weaponId]">
+  WATCH TUTORIAL
+</button>
     </div>
   </section>
 </div>

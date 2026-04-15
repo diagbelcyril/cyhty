@@ -163,3 +163,46 @@
     padding: 20px;
   }
 }
+
+/* Special Section Styling */
+.mythic-section {
+  grid-column: 1 / -1; /* Makes the Mythic row span the full width */
+  background: linear-gradient(90deg, rgba(255,170,0,0.1), rgba(10,20,35,0.45), rgba(255,170,0,0.1)) !important;
+  border: 1px solid rgba(255, 170, 0, 0.3) !important;
+  margin-bottom: 30px;
+}
+
+.mythic-section h2 {
+  color: #ffaa00; /* Mythic Gold color */
+  text-shadow: 0 0 15px rgba(255, 170, 0, 0.6);
+  letter-spacing: 4px;
+}
+
+/* Special Card Styling */
+.mythic-card {
+  border: 1px solid rgba(255, 170, 0, 0.4) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.mythic-card:hover {
+  box-shadow: 0 0 25px rgba(255, 170, 0, 0.3);
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Animated Glow for Mythics */
+.mythic-sparkle {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

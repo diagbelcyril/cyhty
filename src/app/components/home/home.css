@@ -267,3 +267,43 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+.tutorial-video-section {
+  padding: 80px 8%;
+  background: #000;
+  text-align: center;
+}
+
+.tutorial-video-section .section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tutorial-video-section .section-header p {
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+.youtube-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.15);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.youtube-wrapper iframe {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .tutorial-video-section {
+    padding: 50px 5%;
+  }
+
+  .youtube-wrapper iframe {
+    height: 250px;
+  }
+}
